@@ -1,0 +1,47 @@
+<!-- Pjax -->
+<script src="//cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+<script>
+    $(document).pjax('a[target!=_blank]', '.body-wrap', {
+        fragment: '.body-wrap',
+        timeout: 5000,
+    });
+    $(document).pjax('a[target!=_blank]', '.left-col', {
+        fragment: '.left-col',
+        timeout: 5000,
+    });
+	$(document).on('pjax:complete', function() { // 加载多说
+		pajx_loadDuoShuo();
+		load_tag_color();
+		use_fancybox();
+	});
+	function use_fancybox() {
+		require(['//cdn.bootcss.com/fancybox/2.1.4/jquery.fancybox.js'], function(pc){
+			var isFancy = $(".isFancy");
+			if(isFancy.length != 0){
+				var imgArr = $(".article-inner img");
+				for(var i=0,len=imgArr.length;i<len;i++){
+					var src = imgArr.eq(i).attr("src");
+					var title = imgArr.eq(i).attr("alt");
+					imgArr.eq(i).replaceWith("<a href='"+src+"' title='"+title+"' rel='fancy-group' class='fancy-ctn fancybox'><img src='"+src+"' title='"+title+"'></a>");
+				}
+				$(".article-inner .fancy-ctn").fancybox();
+			}
+		});
+	}
+	function pajx_loadDuoShuo(){
+		    var dus=$(".ds-thread");
+		    if($(dus).length==1){
+				var el = document.createElement('div');
+				el.setAttribute('data-thread-key',$(dus).attr("data-thread-key"));//必选参数
+				el.setAttribute('data-url',$(dus).attr("data-url"));
+				DUOSHUO.EmbedThread(el);
+				$(dus).html(el);
+		    }
+	}
+	function load_tag_color() {
+		require(['/js/pc.js'], function(pc){
+			pc.init();
+			isPCInit = true;
+		});
+	}
+</script>

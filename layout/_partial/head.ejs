@@ -114,3 +114,7 @@ if ( is_archive() ) {
 <% } %>
 
 </head>
+
+<% if (theme.pajx){ %>
+    <%- partial('comments/pjax.ejs') %>
+<% } %>
