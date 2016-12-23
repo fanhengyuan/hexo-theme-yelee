@@ -4,10 +4,15 @@
     <script>
         var duoshuoQuery = {short_name:"<%=theme.duoshuo.domain%>"};
         var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+
+        ds.src = 'http://aiti.me/js/embed.js';
+        /*上面是我自己的 embed.js 链接，请改为你自己的地址*/
+
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
         }
 
         <% if (!theme.preload_comment) { %>
