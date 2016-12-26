@@ -7,7 +7,7 @@
         var ds = document.createElement('script');
         ds.type = 'text/javascript';ds.async = true;
 
-        ds.src = 'http://aiti.me/js/embed.js';
+        ds.src = 'https://aiti.me/js/embed.js';
         /*上面是我自己的 embed.js 链接，请改为你自己的地址*/
 
         ds.charset = 'UTF-8';
@@ -18,7 +18,7 @@
         <% if (!theme.preload_comment) { %>
             // Add comment count
             $(function(){ 
-                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=<%=theme.duoshuo.domain%>&threads=<%=key%>&callback=?";
+                var jsonUrl = "https://api.duoshuo.com/threads/counts.jsonp?short_name=<%=theme.duoshuo.domain%>&threads=<%=key%>&callback=?";
                 $.getJSON(jsonUrl, function(result){
                     $.each(result.response, function(i, field){
                         var value = field.comments;
