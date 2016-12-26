@@ -12,13 +12,13 @@
         ds.charset = 'UTF-8';
         (document.getElementsByTagName('head')[0] 
          || document.getElementsByTagName('body')[0]).appendChild(ds);
-        }
 
         /* 多说CDN解决https模式下安全警告问题 */
         dscdn.src = 'https://aiti.me/js/doushu_cdn.js';
         dscdn.charset = 'UTF-8';
         (document.getElementsByTagName('head')[0] 
          || document.getElementsByTagName('body')[0]).appendChild(dscdn);
+         
         }
 
         <% if (!theme.preload_comment) { %>
