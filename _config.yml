@@ -292,7 +292,7 @@ progressBar:
   color: blue
 
 # 是否开启无刷新加载
-pajx: false
+pajx: true
 
 CDN:
   jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js

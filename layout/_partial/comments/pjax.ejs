@@ -9,7 +9,7 @@
         fragment: '.left-col',
         timeout: 5000,
     });
-	$(document).on('pjax:complete', function() { // 加载多说
+	$(document).on('pjax:complete', function() { // 加载各种类
 		pajx_loadDuoShuo();
 		load_tag_color();
 		use_fancybox();
@@ -17,16 +17,17 @@
 	function use_fancybox() {
 		require(['//cdn.bootcss.com/fancybox/2.1.4/jquery.fancybox.js'], function(pc){
 			var isFancy = $(".isFancy");
-			if(isFancy.length != 0){
+			if(isFancy.length == 1){
 				var imgArr = $(".article-inner img");
 				for(var i=0,len=imgArr.length;i<len;i++){
 					var src = imgArr.eq(i).attr("src");
 					var title = imgArr.eq(i).attr("alt");
 					imgArr.eq(i).replaceWith("<a href='"+src+"' title='"+title+"' rel='fancy-group' class='fancy-ctn fancybox'><img src='"+src+"' title='"+title+"'></a>");
 				}
-				$(".article-inner .fancy-ctn").fancybox();
+				// $(".article-inner .fancy-ctn").fancybox();
 			}
 		});
+
 	}
 	function pajx_loadDuoShuo(){
 		    var dus=$(".ds-thread");
@@ -39,6 +40,7 @@
 		    }
 	}
 	function load_tag_color() {
+		$(".body-wrap .article").css("opacity", 1);
 		require(['/js/pc.js'], function(pc){
 			pc.init();
 			isPCInit = true;
