@@ -294,7 +294,7 @@ progressBar:
 # 是否开启无刷新加载
 pajx: true
 
-# 是否开启无音乐盒
+# 是否开启音乐盒
 music_box: true
 
 CDN:
