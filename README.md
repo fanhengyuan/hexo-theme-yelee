@@ -9,3 +9,4 @@ https://api.xiaocp.com/player/
 ## 2016-12-27
 
 加入pjax无刷新加载页面 <a href="https://github.com/defunkt/jquery-pjax">PJAX</a>
+解决https访问 百度、多说安全警告问题
