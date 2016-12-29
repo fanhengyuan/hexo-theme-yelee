@@ -113,17 +113,24 @@ if ( is_archive() ) {
     </script>
 <% } %>
 
-</head>
 
+<!-- PJAX -->
 <% if (theme.pajx){ %>
     <%- partial('comments/pjax.ejs') %>
 <% } %>
 
-<% if (theme.music_box){ %>
-    <style type="text/css">
-        body{margin-top: -18px;}
-    </style>
-    <script>auto="open";random="colse";name="播放器";geci="colse";user="282757265";welcome="colse";tips="欢迎访问Fhy的博客";</script>
-    <script type="text/javascript" src="//api.xiaocp.com/player/music.js"></script>  
+
+<% if (theme.duoshuo.on) { %>
+    <!-- 显示多说UA -->
+    <script src="/js/embed.js"></script>
+    <!-- 多说CDN解决https模式下安全警告问题 -->    
+    <script src="https://dn-hb0716.qbox.me/duoshuo.js"></script>    
 <% } %>
-﻿
+    
+
+<% if (theme.music_box){ %>
+    <script>auto="open";random="colse";name="播放器";geci="colse";user="282757265";welcome="colse";tips="欢迎访问Fhy的博客";</script>
+    <script type="text/javascript" src="//api.xiaocp.com/player/music.js"></script>
+<% } %>
+
+</head>

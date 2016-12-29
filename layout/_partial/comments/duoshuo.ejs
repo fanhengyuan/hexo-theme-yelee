@@ -1,9 +1,6 @@
 <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
     <div class="ds-thread" id="ds-thread" data-thread-key="<%=key%>" data-title="<%=title%>" data-url="<%=url%>"></div>
-    <!-- 多说CDN解决https模式下安全警告问题 -->    
-    <script src="https://dn-hb0716.qbox.me/duoshuo.js"></script>
-
     <script>
         var duoshuoQuery = {short_name:"<%=theme.duoshuo.domain%>"};
         var loadComment = function(){
