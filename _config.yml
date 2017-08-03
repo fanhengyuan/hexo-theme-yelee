@@ -45,7 +45,7 @@ subnav:
   GitHub: "https://github.com/fanhengyuan"
   #V2EX: "#"
   RSS: "/atom.xml"
-  #知乎: "zhihu"
+  知乎: "https://www.zhihu.com/people/fanhengyuan/activities"
   #豆瓣: "douban"
   #简书: "jianshu"
   #SegmentFault: ""
@@ -97,8 +97,8 @@ disqus:
   # you have set "disqus_shortname" in your site's "_config.yml" 
 
 duoshuo: 
-  on: true
-  domain: fanhengyuan
+  on: false
+  domain:
   # 是否开启多说评论，http://duoshuo.com/create-site/
   # 使用上面网址登陆你的多说，然后创建站点，在 domain 中填入你设定的域名前半部分
   # http://<要填的部分>.duoshuo.com (domain只填上<>里的内容，不要填整个网址)
@@ -187,7 +187,7 @@ friends:
   Coding: https://coding.net
   MOxFIVE: http://moxfive.xyz
   张迪: http://www.zhangdii.cn
-  aiti: http://aiti.me
+  fhy's blog: https://blog.aiti.me
   CodeAnyWhere: https://codeanywhere.com
 #friends: false
 
@@ -295,7 +295,7 @@ progressBar:
 pajx: true
 
 # 是否开启音乐盒
-music_box: true
+# music_box: true
 
 CDN:
   jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js

@@ -10,7 +10,7 @@
         timeout: 5000,
     });
 	$(document).on('pjax:complete', function() { // 加载各种类
-		pajx_loadDuoShuo();
+		// pajx_loadDuoShuo();
 		load_tag_color();
 		use_fancybox();
 	});
@@ -29,16 +29,16 @@
 		});
 
 	}
-	function pajx_loadDuoShuo(){
-		var dus=$(".ds-thread");
-	    if($(dus).length==1){
-			var el = document.createElement('div');
-			el.setAttribute('data-thread-key',$(dus).attr("data-thread-key"));//必选参数
-			el.setAttribute('data-url',$(dus).attr("data-url"));
-			DUOSHUO.EmbedThread(el);
-			$(dus).html(el);
-	    }
-	}
+	// function pajx_loadDuoShuo(){
+	// 	var dus=$(".ds-thread");
+	//     if($(dus).length==1){
+	// 		var el = document.createElement('div');
+	// 		el.setAttribute('data-thread-key',$(dus).attr("data-thread-key"));//必选参数
+	// 		el.setAttribute('data-url',$(dus).attr("data-url"));
+	// 		DUOSHUO.EmbedThread(el);
+	// 		$(dus).html(el);
+	//     }
+	// }
 	function load_tag_color() {
 		$(".body-wrap .article").css("opacity", 1);
 		require(['/js/pc.js'], function(pc){
